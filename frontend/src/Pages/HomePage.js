@@ -16,7 +16,7 @@ const HomePage = () => {
   return (
     <div className="container max-w-xl">
       <div className="flex justify-center p-3 w-full mt-10 mx-0 mb-4 bg-white border rounded-lg ">
-        <p className="text-4xl">Innit</p>
+        <p className="text-4xl">Chatter</p>
       </div>
       <div className="bg-white p-4 w-full border rounded-lg">
         <Tabs variant="soft-rounded">
