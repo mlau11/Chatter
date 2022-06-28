@@ -1,4 +1,4 @@
-# Chat App
+# Chatter
 
 A real time chat application. This application will allow the user to chat one on one or in a group with other users.
 

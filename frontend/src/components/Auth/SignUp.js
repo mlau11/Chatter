@@ -22,70 +22,53 @@ const SignUp = () => {
   const toast = useToast();
   const navigate = useNavigate();
 
-  useEffect(() => {}, [profilePic]);
-  const uploadProfilePicture = async (pic) => {
-    setLoading(true);
-    if (pic === undefined) {
-      toast({
-        title: "Please select an image",
-        status: "warning",
-        duration: 5000,
-        isClosable: true,
-        position: "bottom",
-      });
-      return;
-    }
+  // const uploadProfilePicture = async (pic) => {
+  //   setLoading(true);
+  //   if (pic === undefined) {
+  //     toast({
+  //       title: "Please select an image",
+  //       status: "warning",
+  //       duration: 5000,
+  //       isClosable: true,
+  //       position: "bottom",
+  //     });
+  //     return;
+  //   }
 
-    if (pic.type === "image/jpeg" || pic.type === "image/png") {
-      console.log("in");
-      const form = new FormData();
-      form.append("file", pic);
-      form.append("upload_preset", "chat-app");
-      form.append("cloud_name", "douoayl8k");
-      console.log(form);
-      try {
-        const config = {
-          headers: {
-            "Content-Type": `multipart/form-data`,
-          },
-        };
-        const { data } = await axios.post(
-          "https://api.cloudinary.com/v1_1/douoayl8k/image/upload",
-          form,
-          config
-        );
-        console.log(data.url);
-        setProfilePic(data.url);
-        console.log(profilePic);
-        setLoading(false);
-      } catch (err) {
-        console.log(err);
-        setLoading(false);
-      }
+  //   if (pic.type === "image/jpeg" || pic.type === "image/png") {
+  //     const form = new FormData();
+  //     form.append("file", pic);
+  //     form.append("upload_preset", "chat-app");
+  //     form.append("cloud_name", "douoayl8k");
+  //     try {
+  //       const config = {
+  //         headers: {
+  //           "Content-Type": `multipart/form-data`,
+  //         },
+  //       };
+  //       const { data } = await axios.post(
+  //         "https://api.cloudinary.com/v1_1/douoayl8k/image/upload",
+  //         form,
+  //         config
+  //       );
 
-      // .then((res) => res.json())
-      // .then((data) => {
-      //   let picString = data.url.toString();
-      //   console.log(picString);
-      //   setProfilePic(picString);
-
-      //   setLoading(false);
-      // })
-      // .catch((err) => {
-      //   console.log(err);
-      //   setLoading(false);
-      // });
-    } else {
-      toast({
-        title: "Please select an image",
-        status: "warning",
-        duration: 5000,
-        isClosable: true,
-        position: "bottom",
-      });
-      setLoading(false);
-    }
-  };
+  //       setProfilePic(data.url);
+  //       setLoading(false);
+  //     } catch (err) {
+  //       console.log(err);
+  //       setLoading(false);
+  //     }
+  //   } else {
+  //     toast({
+  //       title: "Please select an image",
+  //       status: "warning",
+  //       duration: 5000,
+  //       isClosable: true,
+  //       position: "bottom",
+  //     });
+  //     setLoading(false);
+  //   }
+  // };
 
   const handleSubmit = async () => {
     setLoading(true);
@@ -142,14 +125,14 @@ const SignUp = () => {
   return (
     <form id="sign-up" className="w-full" onSubmit={handleSubmit}>
       <VStack spacing={4}>
-        <label htmlFor="full-name" className="block w-full">
-          <span className="text-gray-800 font-medium">Full Name</span>
+        <label htmlFor="first-name" className="block w-full">
+          <span className="text-gray-800 font-medium">First Name</span>
           <input
-            id="full-name"
+            id="first-name"
             type="text"
             value={name}
             className="mt-1 w-full rounded-lg bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
-            placeholder="Enter full name"
+            placeholder="Enter first name"
             onChange={(e) => setName(e.target.value)}
           />
         </label>
@@ -226,7 +209,7 @@ const SignUp = () => {
             </InputRightElement>
           </InputGroup>
         </label>
-        <label htmlFor="profile-pic" className="flex w-full flex-col">
+        {/* <label htmlFor="profile-pic" className="flex w-full flex-col">
           <span className="font-gray-800 font-medium">
             Upload a profile picture
           </span>
@@ -237,7 +220,7 @@ const SignUp = () => {
             accept="image/*"
             onChange={(e) => uploadProfilePicture(e.target.files[0])}
           />
-        </label>
+        </label> */}
         <Button
           bg="#bee3f8"
           className="w-full"

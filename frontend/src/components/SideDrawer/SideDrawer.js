@@ -130,7 +130,7 @@ const SideDrawer = () => {
           </button>
         </Tooltip>
 
-        <p className="text-2xl font-medium">Innit</p>
+        <p className="text-2xl font-medium">Chatter</p>
 
         <div className="flex items-center">
           <Menu>

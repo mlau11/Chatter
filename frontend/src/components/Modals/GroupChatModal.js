@@ -1,4 +1,5 @@
 import {
+  Button,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -27,10 +28,8 @@ const GroupChatModal = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const toast = useToast();
 
-  const handleSearch = async (query) => {
-    console.log(query);
-    setSearch(query);
-    if (!query) {
+  const handleSearch = async () => {
+    if (!search) {
       return;
     }
 
@@ -159,13 +158,22 @@ const GroupChatModal = ({ children }) => {
                 value={groupChatName}
                 onChange={(e) => setGroupChatName(e.target.value)}
               />
+              <div className="flex">
               <input
-                className="rounded-md h-10 border-inherit"
+                className="rounded-md h-10 border-inherit grow"
                 placeholder="Search for a user"
                 type="text"
                 value={search}
-                onChange={(e) => handleSearch(e.target.value)}
+                onChange={(e) => setSearch(e.target.value)}
               />
+              <Button
+                bg="#a5b4fc"
+                className="w-20 rounded-md font-semibold ml-1"
+                onClick={handleSearch}
+              >
+                Search
+              </Button>
+              </div>
               <div className="w-full flex flex-wrap">
                 {selectedUsers.map((user) => (
                   <UserBadgeItem
@@ -192,7 +200,7 @@ const GroupChatModal = ({ children }) => {
           </ModalBody>
           <ModalFooter>
             <button
-              className="w-28 h-10 rounded-lg text-base font-medium bg-indigo-300"
+              className="w-28 h-10 rounded-lg text-base font-medium bg-sky-300"
               onClick={handleSubmit}
             >
               Create Chat

@@ -63,7 +63,6 @@ const DirectChat = ({ fetchAgain, setFetchAgain }) => {
       ) {
         if (!notifications.includes(messageReceived)) {
           setNotifications([messageReceived, ...notifications]);
-          console.log(notifications);
           setFetchAgain(!fetchAgain);
         }
       } else {
