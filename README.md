@@ -6,7 +6,7 @@ Real time messaging is handled by Socket.IO. Components are built with Chakra UI
 
 ## Demo
 
-[chat-app-ml](chat-app-ml.herokuapp.com)
+[Chatter](chatter-ml.herokuapp.com)
 
 ## Available Scripts
 
