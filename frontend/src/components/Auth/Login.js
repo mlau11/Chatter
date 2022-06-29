@@ -114,7 +114,7 @@ const Login = () => {
           </InputGroup>
         </label>
         <Button
-          bg="#bee3f8"
+          bg="#73d3fc"
           className="w-full"
           type="submit"
           isLoading={loading}
