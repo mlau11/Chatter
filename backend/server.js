@@ -28,7 +28,7 @@ if (process.env.NODE_ENV === "production") {
   );
 } else {
   app.get("/", (req, res) => {
-    res.send("API is running..");
+    res.send("Did not build.");
   });
 }
 
@@ -45,8 +45,6 @@ const io = require("socket.io")(server, {
 });
 
 io.on("connection", (socket) => {
-  console.log("connected to socket.io");
-
   socket.on("setup", (userData) => {
     socket.join(userData._id);
     socket.emit("connection");
@@ -54,7 +52,6 @@ io.on("connection", (socket) => {
 
   socket.on("join chat", (room) => {
     socket.join(room);
-    console.log("User joined room:" + room);
   });
 
   socket.on("new message", (message) => {
@@ -73,7 +70,6 @@ io.on("connection", (socket) => {
   socket.on("stop typing", (room) => socket.in(room).emit("stop typing"));
 
   socket.off("setup", () => {
-    console.log("User disconnected");
     socket.leave(userData._id);
   });
 });
