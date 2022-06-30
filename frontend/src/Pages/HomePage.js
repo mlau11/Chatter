@@ -14,7 +14,7 @@ const HomePage = () => {
   }, [navigate]);
 
   return (
-    <div className="container max-w-xl">
+    <div className="container max-w-xl w-11/12 md:w-8/12">
       <div className="flex justify-center p-3 w-full mt-10 mx-0 mb-4 bg-white border rounded-lg ">
         <p className="text-4xl">Chatter</p>
       </div>
