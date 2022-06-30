@@ -241,7 +241,7 @@ const EditGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
               />
               <Button
                 bg="#a5b4fc"
-                className="w-20 rounded-md font-semibold m-1"
+                className="w-20 rounded-md font-semibold m-1 text-white"
                 onClick={rename}
                 isLoading={renameLoading}
               >
@@ -258,7 +258,7 @@ const EditGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
               />
               <Button
                 bg="#a5b4fc"
-                className="w-20 rounded-md font-semibold m-1"
+                className="w-20 rounded-md font-semibold m-1 text-white"
                 onClick={handleSearch}
               >
                 Search
@@ -283,7 +283,7 @@ const EditGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
           <ModalFooter>
             <button
               onClick={() => removeUser(user)}
-              className="h-10 w-32 rounded-md bg-red-400 font-semibold"
+              className="h-10 w-32 rounded-md bg-red-400 font-semibold text-white hover:text-black hover:bg-[#E2E8F0]"
             >
               Leave Group
             </button>
