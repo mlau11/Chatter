@@ -169,7 +169,7 @@ const Chat = ({ fetchAgain, setFetchAgain }) => {
       {selectedChat ? (
         <>
           <p className="text-base sm:text-lg font-medium w-full pb-3 flex items-center justify-between">
-            <button className="w-10 h-10 bg-[#EDF2F7] inline-flex items-center rounded-md">
+            <button className="w-10 h-10 bg-[#EDF2F7] inline-flex items-center rounded-md md:hidden">
               <ArrowLeftIcon
                 className="h-5 w-5 grow"
                 onClick={() => setSelectedChat("")}
