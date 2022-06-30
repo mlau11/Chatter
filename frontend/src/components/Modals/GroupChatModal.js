@@ -168,7 +168,7 @@ const GroupChatModal = ({ children }) => {
               />
               <Button
                 bg="#a5b4fc"
-                className="w-20 rounded-md font-semibold ml-1"
+                className="w-20 rounded-md font-semibold ml-1 text-white hover:text-black"
                 onClick={handleSearch}
               >
                 Search
@@ -200,7 +200,7 @@ const GroupChatModal = ({ children }) => {
           </ModalBody>
           <ModalFooter>
             <button
-              className="w-28 h-10 rounded-lg text-base font-medium bg-sky-300"
+              className="w-28 h-10 rounded-lg text-base font-medium bg-sky-300 text-white hover:bg-[#E2E8F0] hover:text-black"
               onClick={handleSubmit}
             >
               Create Chat

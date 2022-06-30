@@ -206,7 +206,7 @@ const SideDrawer = () => {
               />
               <button
                 onClick={handleSearch}
-                className="inline-flex justify-center items-center font-semibold bg-indigo-300 hover:bg-[#E2E8F0] rounded-md ml-1 flex-1 text-xs md:text-base"
+                className="inline-flex justify-center items-center font-semibold bg-indigo-300 hover:bg-[#E2E8F0] rounded-md ml-1 flex-1 text-xs md:text-base text-white hover:text-black"
               >
                 Search
               </button>
