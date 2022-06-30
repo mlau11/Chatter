@@ -11,7 +11,7 @@ import io from "socket.io-client";
 import Lottie from "react-lottie";
 import animationData from "../../animations/typing.json";
 
-const ENDPOINT = "https://chat-app-ml.herokuapp.com";
+const ENDPOINT = "https://chatter-ml.herokuapp.com";
 var socket, selectedChatCompare;
 
 const DirectChat = ({ fetchAgain, setFetchAgain }) => {
