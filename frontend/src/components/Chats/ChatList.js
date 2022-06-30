@@ -15,7 +15,6 @@ const Chats = ({ fetchAgain }) => {
   const toast = useToast();
 
   useEffect(() => {
-    setLoggedUser(JSON.parse(localStorage.getItem("userInfo")));
     fetchChats();
   }, [fetchAgain]);
 
@@ -73,7 +72,7 @@ const Chats = ({ fetchAgain }) => {
               >
                 <p>
                   {!chat.isGroupChat
-                    ? getSender(loggedUser, chat.users)
+                    ? getSender(user, chat.users)
                     : chat.chatName}
                 </p>
               </div>

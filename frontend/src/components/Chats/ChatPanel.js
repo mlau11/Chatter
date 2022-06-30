@@ -1,6 +1,6 @@
 import React from "react";
 import { ChatState } from "../../context/chatContext";
-import DirectChat from "./DirectChat";
+import Chat from "./Chat";
 
 const ChatPanel = ({ fetchAgain, setFetchAgain }) => {
   const { selectedChat } = ChatState();
@@ -12,7 +12,7 @@ const ChatPanel = ({ fetchAgain, setFetchAgain }) => {
       } md:flex flex-col items-center rounded-lg bg-white p-3 w-full md:w-2/3 mx-6`}
       style={{ maxHeight: "100%", height: "90%" }}
     >
-      <DirectChat fetchAgain={fetchAgain} setFetchAgain={setFetchAgain} />
+      <Chat fetchAgain={fetchAgain} setFetchAgain={setFetchAgain} />
     </div>
   );
 };
