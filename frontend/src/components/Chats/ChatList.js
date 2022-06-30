@@ -49,7 +49,7 @@ const Chats = ({ fetchAgain }) => {
       <div className="flex justify-between items-center w-full pb-3 text-xl md:text-2xl font-medium">
         Chats
         <GroupChatModal>
-          <button className="flex justify-center items-center text-xs md:text-xs lg:text-base bg-[#EDF2F7] rounded-md h-10 p-2">
+          <button className="flex justify-center items-center text-xs lg:text-base bg-[#EDF2F7] rounded-md h-10 p-2">
             New Group Chat
             <PlusIcon className="h-5 w-5 ml-2" />
           </button>
