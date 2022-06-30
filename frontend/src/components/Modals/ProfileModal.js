@@ -32,7 +32,7 @@ const ProfileModal = ({ user, children }) => {
           </h4>
           <ModalCloseButton />
           <ModalBody className="flex justify-center items-center flex-col">
-            <img src={user.pic} alt={user.name} className="w-40 rounded-full" />
+            {/* <img src={user.pic} alt={user.name} className="w-40 rounded-full" /> */}
             <p className="text-xl font-normal p-4">
               <span className="font-medium">Email : </span>
               {user.email}
