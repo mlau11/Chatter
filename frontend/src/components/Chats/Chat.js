@@ -14,7 +14,7 @@ import animationData from "../../animations/typing.json";
 const ENDPOINT = "https://chatter-ml.herokuapp.com";
 var socket, selectedChatCompare;
 
-const DirectChat = ({ fetchAgain, setFetchAgain }) => {
+const Chat = ({ fetchAgain, setFetchAgain }) => {
   const {
     user,
     selectedChat,
@@ -241,4 +241,4 @@ const DirectChat = ({ fetchAgain, setFetchAgain }) => {
   );
 };
 
-export default DirectChat;
+export default Chat;

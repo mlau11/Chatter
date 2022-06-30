@@ -9,7 +9,6 @@ import { getSender } from "./ChatLogic";
 import GroupChatModal from "../Modals/GroupChatModal";
 
 const Chats = ({ fetchAgain }) => {
-  const [loggedUser, setLoggedUser] = useState();
   const { user, chats, setChats, selectedChat, setSelectedChat } = ChatState();
 
   const toast = useToast();
