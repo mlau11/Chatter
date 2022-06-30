@@ -11,7 +11,7 @@ import io from "socket.io-client";
 import Lottie from "react-lottie";
 import animationData from "../../animations/typing.json";
 
-const ENDPOINT = "https://chatter-ml.herokuapp.com";
+const ENDPOINT = "http://localhost:5000";
 var socket, selectedChatCompare;
 
 const Chat = ({ fetchAgain, setFetchAgain }) => {
@@ -50,7 +50,7 @@ const Chat = ({ fetchAgain, setFetchAgain }) => {
     socket = io(ENDPOINT);
 
     socket.emit("setup", user);
-    socket.on("connection", () => setSocketConnected(true));
+    socket.on("connected", () => setSocketConnected(true));
     socket.on("typing", () => setIsTyping(true));
     socket.on("stop typing", () => setIsTyping(false));
   }, []);

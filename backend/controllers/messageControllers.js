@@ -32,7 +32,6 @@ const sendMessage = asyncHandler(async (req, res) => {
     });
 
     res.json(message);
-    console.log(message);
   } catch (err) {
     res.status(400);
     throw new Error(err.message);
