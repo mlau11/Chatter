@@ -89,6 +89,7 @@ const GroupChatModal = ({ children }) => {
       setGroupChatName("");
       setSearch("");
       setSearchResults([]);
+      setSelectedUsers([])
       onClose();
       toast({
         title: "New group chat created",

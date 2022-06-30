@@ -241,7 +241,7 @@ const EditGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
               />
               <Button
                 bg="#a5b4fc"
-                className="w-20 rounded-md font-semibold m-1 text-white"
+                className="w-20 rounded-md font-semibold m-1 text-white hover:text-black"
                 onClick={rename}
                 isLoading={renameLoading}
               >
@@ -258,7 +258,7 @@ const EditGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
               />
               <Button
                 bg="#a5b4fc"
-                className="w-20 rounded-md font-semibold m-1 text-white"
+                className="w-20 rounded-md font-semibold m-1 text-white hover:text-black"
                 onClick={handleSearch}
               >
                 Search
