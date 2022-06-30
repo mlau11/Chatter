@@ -88,7 +88,7 @@ const SideDrawer = () => {
     }
   };
 
-  const createDC = async (userId) => {
+  const createChat = async (userId) => {
     try {
       setLoadingChat(true);
 
@@ -102,6 +102,8 @@ const SideDrawer = () => {
       const { data } = await axios.post("/api/chat", { userId }, config);
 
       if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
+      setSearch('')
+      setSearchResults([])
       setSelectedChat(data);
       setLoadingChat(false);
       onClose();
@@ -217,7 +219,7 @@ const SideDrawer = () => {
                   key={user._id}
                   user={user}
                   handleFunction={() => {
-                    createDC(user._id);
+                    createChat(user._id);
                   }}
                 />
               ))
