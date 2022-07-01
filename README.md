@@ -31,25 +31,3 @@ A real time chat application. This application will allow the user to chat one o
     * If you use a port number that is not 5000 in your endpoint, then you must change the proxy in frontend/package.json to match the port number you selected
 
 To start the project, you must run `npm start` in both the backend and frontend folders on separate terminals.
-
-Now you are able to run one of the following scripts.
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open http://localhost:YOUR-PORT-NUMBER to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
