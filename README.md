@@ -1,6 +1,6 @@
 # Chatter
 
-A real time chat application. This application will allow the user to chat one on one or in a group with other users.
+A real time chat application. This application will allow users to chat one on one or in a group with other users.
 
 ## Built With
 
@@ -23,11 +23,12 @@ A real time chat application. This application will allow the user to chat one o
 ## Installation
 
 1. Clone repo and install dependencies
-2. You will need to add your own .env file to configure environment variables for:
-    * Port number
-    * Mongo URI
-    * JWT Secret
-3. You will also need to change the CORS origin in backend/Server.js (line 43) and the Endpoint in frontend/Chat.js (line 14)
-    * If you use a port number that is not 5000 in your endpoint, then you must change the proxy in frontend/package.json to match the port number you selected
+2. Add .env file to configure environment variables for:
+    * PORT
+    * MONGO_URI
+    * JWT_SECRET
+3. Change the CORS origin in backend/Server.js (line 43)
+4. Change ENDPOINT in frontend/Chat.js (line 14)
+    * If a different port number than 5000 is used as the endpoint, then the proxy in frontend/package.json must be changed to match the port number selected
 
-To start the project, you must run `npm start` in both the backend and frontend folders on separate terminals.
+To start the project, run `npm start` in both the backend and frontend folders on separate terminals.
