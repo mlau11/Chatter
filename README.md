@@ -28,7 +28,7 @@ A real time chat application. This application will allow the user to chat one o
     * Mongo URI
     * JWT Secret
 3. You will also need to change the CORS origin in backend/Server.js (line 43) and the Endpoint in frontend/Chat.js (line 14)
-  - If you use a port number that is not 5000 in your endpoint, then you must change the proxy in frontend/package.json to match the port number you selected
+    * If you use a port number that is not 5000 in your endpoint, then you must change the proxy in frontend/package.json to match the port number you selected
 
 To start the project, you must run `npm start` in both the backend and frontend folders on separate terminals.
 
