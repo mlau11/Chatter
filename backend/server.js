@@ -40,14 +40,14 @@ const server = app.listen(PORT, console.log(`Server started on PORT ${PORT}`));
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://chatter-ml.herokuapp.com",
   },
 });
 
 io.on("connection", (socket) => {
   socket.on("setup", (userData) => {
     socket.join(userData._id);
-    socket.emit("connection");
+    socket.emit("connected");
   });
 
   socket.on("join chat", (room) => {
