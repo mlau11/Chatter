@@ -24,9 +24,9 @@ A real time chat application. This application will allow the user to chat one o
 
 1. Clone repo and install dependencies
 2. You will need to add your own .env file to configure environment variables for:
-  - Port number
-  - Mongo URI
-  - JWT Secret
+    * Port number
+    * Mongo URI
+    * JWT Secret
 3. You will also need to change the CORS origin in backend/Server.js (line 43) and the Endpoint in frontend/Chat.js (line 14)
   - If you use a port number that is not 5000 in your endpoint, then you must change the proxy in frontend/package.json to match the port number you selected
 
